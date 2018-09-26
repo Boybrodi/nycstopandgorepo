@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div class="heading">  <h1 class = "heading"> NEW YORK CITY, YU HERD! </h1>
+</div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+ h1 {
+   position: relative;
+   font-family: "Times New Roman", Times, serif;
+   font-style: italic;
+   text-align: center;
+   top: 0;
+   color: white;
+   background-color: black;
+   border-radius: 5px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}*/
+
+#myVideo {
+ border-style: solid;
+ border-radius: 5px;
+ position: relative;
+ z-index:-1;
+ top:0;
+ left:0;
+ width:100%;
+ height:100vh;
+}
+
+.content {
+    text-align: center;
+    position: relative;
+    height: ;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+#myBtn {
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: red;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: green;
+    color: black;
+}
+
+.body {
+  border-style: solid;
+  border-radius: 5px;
+  position: relative;
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  text-align: center;
+  bottom: 0;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="nycbrody.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class = "body">
+  <p>This is New York City. A rippeling cesspool of movement and stagnation. In one minute you'll be rushing through the streets going 74 mph in a 25 then in a split second you're in a jam waisting an hour of your life. At this point, there's very little you as an individual can do to push forth. Usually there is a gate keeper who will inch you forward. The bane and bastion of hope to Uber drivers, the NYPD traffic cop who blows the whistle and waves you by or makes you stop. Uncover the same sensation of power by pressing the button below. </p>
+</div>
+
+<div class="content">
+<button id="myBtn" onclick="myFunction()">STOP!</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "STOP!";
+  } else {
+    video.pause();
+    btn.innerHTML = "GO!";
+  }
+}
+</script>
+
+</body>
+</html>
